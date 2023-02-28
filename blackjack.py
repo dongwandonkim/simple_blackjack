@@ -24,9 +24,26 @@ class Deck:
     def shuffle(self):
         random.shuffle(self.all_cards)
 
-    def __str__(self):
-        return f"Deck of {len(self.all_cards)} cards"
-        
+    def deal_one_card(self):
+        return self.all_cards.pop()
 
-new_deck = Deck()
-print(new_deck)
+    def __str__(self):
+        return f"Deck of {len(self.all_cards)} cards" 
+
+# new_deck = Deck()
+# new_deck.shuffle()
+# print(new_deck)
+# my_card = new_deck.deal_one_card()
+# print(new_deck, my_card)
+
+class Hand:
+    def __init__(self,name):
+        self.name = name
+        self.hand = []
+
+    def hit(self, card):
+        self.hand.append(card)
+        print(f"{self.name} received {card}")
+
+    def stay(self):
+        print("Stay")
