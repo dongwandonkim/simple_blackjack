@@ -47,3 +47,18 @@ class Hand:
 
     def stay(self):
         print("Stay")
+
+class Chip:
+    def __init__(self, amount=0):
+        self.total_chips = amount
+
+    def add_chips(self, amount):
+        self.total_chips += amount
+
+    def __str__(self):
+        return f"{self.total_chips} chips left"
+    
+# player = Hand("p1")
+
+# player.hit(my_card)
+# print(player.hand[0])
